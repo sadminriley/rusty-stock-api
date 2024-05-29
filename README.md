@@ -1,5 +1,7 @@
 # Rust Stock API
-A stock api written in rust using Financial Modeling Prep
+A stock api written in rust using Financial Modeling Prep API.
+
+This is a Rust ported, updated version of my Python [FlaskStockAPI](https://github.com/sadminriley/FlaskStockAPI)
 
 
 
