@@ -5,7 +5,7 @@ This is a Rust ported, updated version of my Python repo [FlaskStockAPI](https:/
 
 
 
-Example using clap for v3 endpoint requests-
+Example using clap for v3 endpoint requests -
 
 ```
 $ cargo run -- --endpoint quote-order --query TSLA
