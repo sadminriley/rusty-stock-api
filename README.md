@@ -1,7 +1,7 @@
 # rusty-stock-cli
-A stock cli tool written in Rust using Financial Modeling Prep API.
+A stock cli tool written in Rust using the [Financial Modeling Prep API.](https://site.financialmodelingprep.com/developer/docs "Financial Modeling Prep API.")
 
-This is a Rust ported, updated version of my Python repo [FlaskStockAPI](https://github.com/sadminriley/FlaskStockAPI)
+This is a Rust ported, updated version of my Python repo with similar functionality located here [FlaskStockAPI](https://github.com/sadminriley/FlaskStockAPI)
 
 
 
@@ -39,16 +39,8 @@ Stock quote for TSLA at quote-order: [
 ]
 ```
 
-#TODO
 
-[*] Make a function that works with v4 api requests
-[]  Implement support for query endpoints that do not take two arguments
-
-
-
-
-
-Improved endpoints for v3
+### Improved endpoints for v3
 ```
 $ cargo run -- --endpoint quote-short --query AAPL
      Running `target/debug/financial-modeling-prep-api --endpoint quote-short --query AAPL`
@@ -62,7 +54,7 @@ Response: [
 ```
 
 
-And, if we had a paid version of the v4 key this would also work, in theory -
+#### And, if we had a paid version of the v4 key this would also work, in theory
 
 ```
 $ cargo run -- --v4endpoint commitment_of_traders_reports --query AAPL
@@ -73,20 +65,14 @@ Response: {
 
 ```
 
-## Running with rust binary
+## Running with Rust binary
 
 ```
- cargo run --bin rusty-stock-cli --endpoint                                                                                    [4:26:53]
-error: unexpected argument '--endpoint' found
 
-  tip: a similar argument exists: '--keep-going'
 
-Usage: cargo run --bin [<NAME>] --keep-going [ARGS]...
 
-For more information, try '--help'.
-rileylouvier:rust/ (main✗) $ cargo run --bin rusty-stock-cli -- --endpoint quote-order --query TSLA                                                        [4:26:56]
-warning: /Users/rileylouvier/code/rust/Cargo.toml: unused manifest key: package.author
-    Finished dev [unoptimized + debuginfo] target(s) in 0.12s
+
+$ cargo run --bin rusty-stock-cli -- --endpoint quote-order --query TSLA
      Running `target/debug/rusty-stock-cli --endpoint quote-order --query TSLA`
 Response: [
   {
@@ -115,3 +101,8 @@ Response: [
   }
 ]
 ```
+
+# TODO
+
+[*] Make a function that works with v4 api requests
+[ ]  Implement support for query endpoints that do not take two arguments
