@@ -5,3 +5,4 @@ Cargo.lock
 
 # Generated files
 /target/
+.vscode*
