@@ -1,6 +1,8 @@
 # rusty-stock-cli
 A stock cli tool written in Rust using the [Financial Modeling Prep API.](https://site.financialmodelingprep.com/developer/docs "Financial Modeling Prep API.")
 
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/sadminriley/rusty-stock-api/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/sadminriley/rusty-stock-api/tree/main)
+
 This is a Rust ported, updated version of my Python repo with similar functionality located here [FlaskStockAPI](https://github.com/sadminriley/FlaskStockAPI)
 
 
