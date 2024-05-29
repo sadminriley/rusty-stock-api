@@ -8,7 +8,7 @@ This is a Rust ported, updated version of my Python [FlaskStockAPI](https://gith
 Example using clap for v3 endpoint requests-
 
 ```
-$ cargo run -- quote-order TSLA
+$ cargo run -- --endpoint quote-order --query TSLA
 
      Running `target/debug/financial-modeling-prep-api quote-order TSLA`
 Stock quote for TSLA at quote-order: [
@@ -41,4 +41,34 @@ Stock quote for TSLA at quote-order: [
 
 #TODO
 
-make a function that works with v4 api requests
+[*] Make a function that works with v4 api requests
+[]  Implement support for query endpoints that do not take two arguments
+
+
+
+
+
+Improved endpoints for v3
+```
+$ cargo run -- --endpoint quote-short --query AAPL
+     Running `target/debug/financial-modeling-prep-api --endpoint quote-short --query AAPL`
+Response: [
+  {
+    "symbol": "AAPL",
+    "price": 189.99,
+    "volume": 52071035
+  }
+]
+```
+
+
+And, if we had a paid version of the v4 key this would also work, in theory -
+
+```
+$ cargo run -- --v4endpoint commitment_of_traders_reports --query AAPL
+     Running `target/debug/financial-modeling-prep-api --v4endpoint commitment_of_traders_reports --query AAPL`
+Response: {
+  "Error Message": "Special Endpoint : This endpoint is not available under your current subscription please visit our subscription page to upgrade your plan at https://site.financialmodelingprep.com/developer/docs/pricing"
+}
+
+```
